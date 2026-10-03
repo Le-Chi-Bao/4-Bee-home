@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 BEE HOMESTAY - Nghỉ dưỡng tuyệt vời</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 🐝 ONG BAY LƠ LỬNG -->
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🏡 4 BEE HOMESTAY VẠN PHÚC</div>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="gioi_thieu.html">Giới thiệu</a>
+            <a href="phong.html">Phòng</a>
+            <a href="lien_he.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div id="auto-checkin" class="auto-checkin">Đang tải lời chào...</div>
+        <h1>Chào mừng đến Homestay 4 BEE HOME</h1>
+        <p>Không gian yên bình giữa khu đô thị Vạn Phúc City, Hồ Chí Minh</p>
+        <a href="phong.html" class="btn-datphong">Đặt phòng ngay</a>
+    </section>
+
+    <!-- Giới thiệu ngắn -->
+    <section class="intro reveal">
+        <h2>Về chúng tôi</h2>
+        <p>Homestay tọa lạc tại vị trí đắc địa, view đẹp, phù hợp nghỉ dưỡng...</p>
+    </section>
+
+    <!-- Danh sách phòng -->
+    <section class="rooms reveal">
+        <h2>Phòng của chúng tôi</h2>
+        <div class="room-list">
+            
+            <!-- Phòng Basic -->
+            <div class="room-card">
+                <img src="images/bassic1.jpg" alt="HONEY BEE">
+                <h3>HONEY BEE</h3>
+                <p>550.000đ / đêm</p>
+                <a href="lien_he.html" class="btn">Đặt phòng</a>
+            </div>
+
+            <!-- Phòng VIP -->
+            <div class="room-card">
+                <img src="images/vip1.jpg" alt="Phòng VIP">
+                <h3>Phòng VIP</h3>
+                <p>700.000đ / đêm</p>
+                <a href="lien_he.html" class="btn">Đặt phòng</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 4 BEE HOMESTAY | Hotline: 0327 583 783 | Zalo 0327 583 783 </p>
+    </footer>
+
+    <!-- Script chào tự động -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const greetingBox = document.getElementById("auto-checkin");
+            const currentHour = new Date().getHours();
+            let greeting = "";
+
+            if (currentHour >= 5 && currentHour < 12) {
+                greeting = "🌞 Chào buổi sáng! 4 BEE HOME chúc bạn ngày mới tốt lành.";
+            } else if (currentHour >= 12 && currentHour < 18) {
+                greeting = "☀️ Chào buổi chiều! Homestay đã sẵn sàng đón bạn.";
+            } else {
+                greeting = "🌙 Chào buổi tối! Không gian yên bình đang chờ đón bạn.";
+            }
+
+            greetingBox.innerText = greeting;
+        });
+    </script>
+
+    <!-- ✨ SCROLL REVEAL - Fade in khi cuộn trang -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const revealPoint = 100;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                }
+            });
+        });
+        
+        // Kích hoạt ngay khi trang vừa load (cho các phần đã hiện sẵn)
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

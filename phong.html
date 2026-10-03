@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 BEE HOMESTAY - Phòng & Giá</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 🐝 ONG BAY LƠ LỬNG -->
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+    <div class="floating-bee">🐝</div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🏡 4 BEE HOMESTAY VẠN PHÚC</div>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="gioi_thieu.html">Giới thiệu</a>
+            <a href="phong.html">Phòng</a>
+            <a href="lien_he.html">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Tiêu đề trang -->
+    <section class="page-title">
+        <h1>Phòng & Giá</h1>
+        <p>Khám phá không gian nghỉ dưỡng ấm cúng tại 4 BEE HOME</p>
+    </section>
+
+    <!-- Danh sách phòng chi tiết -->
+    <section class="rooms-page">
+
+        <!-- ===== PHÒNG HONEY BEE ===== -->
+        <div class="room-detail-card" id="honeybee">
+            
+            <!-- Thư viện ảnh -->
+            <div class="room-gallery">
+                <img src="images/bassic1.jpg" alt="HONEY BEE" class="main-image" id="mainBasic">
+                <div class="thumbnail-list">
+                    <img src="images/bassic1.jpg" onclick="changeImage('mainBasic', this.src)" class="active">
+                    <img src="images/bassic2.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic3.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic4.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic5.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic6.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic7.jpg" onclick="changeImage('mainBasic', this.src)">
+                    <img src="images/bassic8.jpg" onclick="changeImage('mainBasic', this.src)">
+                </div>
+            </div>
+
+            <!-- Thông tin phòng -->
+            <div class="room-info">
+                <h2>HONEY BEE</h2>
+                <p class="price">550.000đ / đêm</p>
+                <p class="desc">Phòng tiêu chuẩn, gọn gàng và sạch sẽ. Phù hợp cho 1-2 người, khách đi công tác hoặc du lịch tiết kiệm. Không gian ấm cúng, đầy đủ tiện nghi cơ bản.</p>
+                
+                <ul class="amenities">
+                    <li>📶 Wifi tốc độ cao</li>
+                    <li>⭐ Check in tự động</li>
+                    <li>🚪 Cửa ra vào vân tay</li>
+                    <li>❄️ Điều hòa 2 chiều</li>
+                    <li>🚿 Nước nóng lạnh</li>
+                    <li>📺 Smart TV 40 inch</li>
+                </ul>
+                
+                <a href="lien_he.html" class="btn-book">Đặt phòng ngay</a>
+            </div>
+        </div>
+
+        <!-- ===== PHÒNG VIP ===== -->
+        <div class="room-detail-card" id="vip">
+            
+            <!-- Thư viện ảnh -->
+            <div class="room-gallery">
+                <img src="images/vip1.jpg" alt="Phòng VIP" class="main-image" id="mainVip">
+                <div class="thumbnail-list">
+                    <img src="images/vip1.jpg" onclick="changeImage('mainVip', this.src)" class="active">
+                    <img src="images/vip2.jpg" onclick="changeImage('mainVip', this.src)">
+                    <img src="images/vip3.jpg" onclick="changeImage('mainVip', this.src)">
+                    <img src="images/vip4.jpg" onclick="changeImage('mainVip', this.src)">
+                </div>
+            </div>
+
+            <!-- Thông tin phòng -->
+            <div class="room-info">
+                <h2>Phòng VIP</h2>
+                <p class="price">700.000đ / đêm</p>
+                <p class="desc">Phòng cao cấp với không gian rộng rãi, nội thất sang trọng. View đẹp, phù hợp cho các cặp đôi muốn tận hưởng kỳ nghỉ lãng mạn hoặc khách cần không gian riêng tư thoải mái.</p>
+                
+                <ul class="amenities">
+                    <li>📶 Wifi tốc độ cao</li>
+                    <li>⭐ Check in tự động</li>
+                    <li>🚪 Cửa ra vào vân tay</li>
+                    <li>❄️ Điều hòa 2 chiều</li>
+                    <li>🚿 Nước nóng lạnh</li>
+                    <li>📺 Smart TV 50 inch</li>
+                </ul>
+                
+                <a href="lien_he.html" class="btn-book">Đặt phòng ngay</a>
+            </div>
+        </div>
+
+        <!-- ===== BẢNG GIÁ ===== -->
+        <div class="price-table-wrapper">
+            <h2 class="price-table-title">📋 Bảng Giá Tham Khảo</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Loại Phòng</th>
+                        <th>Ngày Thường</th>
+                        <th>Cuối Tuần</th>
+                        <th>Lễ / Tết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Compo 3 tiếng</strong></td>
+                        <td>300.000đ</td>
+                        <td>350.000đ</td>
+                        <td>550.000đ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compo 5 tiếng</strong></td>
+                        <td>400.000đ</td>
+                        <td>450.000đ</td>
+                        <td>500.000đ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compo 9 tiếng</strong></td>
+                        <td>500.000đ</td>
+                        <td>600.000đ</td>
+                        <td>700.000đ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compo qua đêm</strong></td>
+                        <td>600.000đ</td>
+                        <td>650.000đ</td>
+                        <td>700.000đ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compo 1 ngày</strong></td>
+                        <td>700.000đ</td>
+                        <td>860.000đ</td>
+                        <td>1.200.000đ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Ghi chú -->
+            <div class="price-note">
+                <p><strong>📌 LƯU Ý NHA KHÁCH YÊU:</strong></p>
+                <ul>
+                    <li>Giá trên đã bao gồm thuế và phí dịch vụ.</li>
+                    <li>Khách thêm người (từ người thứ 3): phụ thu <strong>100.000đ/người/đêm</strong>.</li>
+                    <li>Nhận phòng từ 14:00 – Trả phòng trước 12:00.</li>
+                    <li>Đối với khách thuê compo thì nhận phòng khi nào cũng được.</li>
+                    <li>Huỷ phòng hoàn lại 50% tiền cọc.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ✅ Footer cố định -->
+    <footer>
+        <p>© 2025 4 BEE HOMESTAY HOTEL VẠN PHÚC CITY | Hotline: <a href="tel:0327583783" style="color: #f39c12; text-decoration: none; font-weight: bold;">0327 583 783</a> | Zalo: <a href="https://zalo.me/0327583783" target="_blank" style="color: #f39c12; text-decoration: none; font-weight: bold;">Nhắn tin</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
